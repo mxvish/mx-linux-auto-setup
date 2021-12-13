@@ -1,6 +1,6 @@
 # mx_linux_cheatsheet
 
-- how to use
+- How to use
 
 execute
 
