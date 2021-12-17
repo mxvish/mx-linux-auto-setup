@@ -24,6 +24,8 @@ sudo apt -y install r-base
 #sudo apt -y install ./first/rstudio*.deb
 sudo apt -y install fcitx fcitx-mozc --install-recommends
 sudo apt -y install tree
+sudo apt -y install x11vnc
+sudo apt -y install python3-django
 
 #edit & mv files-----------------------------
 mv bashrc .bashrc
@@ -40,11 +42,9 @@ mkdir downloads
 mv terminalrc .config/xfce4/terminal/
 
 #configure system settings-----------------------------
-#gsettings set org.gnome.desktop.notifications show-banners false
+xfconf-query -c xfce4-notifyd -p /do-not-disturb -s true
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'mozc-jp')]"
 timedatectl set-timezone Asia/Tokyo
-
-#configure system settings from tweaks-----------------------------
 gsettings set org.gnome.desktop.background picture-options scaled
 xfconf-query -c xfce4-session -p /general/SaveOnExit -s false
 xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-dark-mx
@@ -52,6 +52,11 @@ xfconf-query -c xsettings -p /Xft/DPI -s 120
 xfconf-query -c xsettings -p /Gtk/KeyThemeName -s Emacs
 
 sudo pm-powersave false
+gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.desktop.search-providers disable-external true
+xfconf-query -c xfce4-desktop -np '/desktop-icons/style' -t 'int' -s '0'
+conkytoggle.sh
+
 sudo apt-get -y autoremove
 sudo apt -y clean
 reboot
@@ -87,23 +92,6 @@ desk changer
 		remove item /usr/share/*
 		add folder ./pictures/wallpaper
 	daemon 30 min interval
-
-thunderbird
-	theme
-		Tools > add-ons
-		install "dark reader"
-
-	gmail
-		File > New > Existing Mail Account
-		enter account info
-		protocol=IMAP
-	
-	appearance
-		show nothing in inbox
-		apply columns to folders and children in all accounts
-	
-	edit > preferences > general
-		uncheck thunderbird start page
 
 printer
 	Ctrl+P on brave browser
