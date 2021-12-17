@@ -23,7 +23,9 @@ alias e='emacs'
 alias ex='emacs ~/xfcesetup.sh' 
 alias g='brave-browser gakujo.shizuoka.ac.jp/portal/'
 alias gi='brave-browser github.com/kenteroshima'
+alias gm='brave-browser google.com/maps'
 alias ht='sh ~/first/ht.sh'
+alias hl='brave-browser localhost'
 alias ke='brave-browser keep.google.com'
 alias l='ls -a ~/downloads'
 alias m='brave-browser mail.google.com/mail/u/0/h'
@@ -55,6 +57,7 @@ alias xe='xrandr --output eDP-1 --brightness'
 alias x1='xrandr --output eDP-1 --brightness 1'
 alias x3='xrandr --output eDP-1 --brightness 0.3'
 alias xh='xrandr --output HDMI-1 --brightness'
+alias xh5='xrandr --output HDMI-1 --brightness 0.5'
 alias Wc='sh ~/Wc.sh'
 alias y='brave-browser youtube.com/playlist?list=WL'
 
@@ -177,7 +180,7 @@ if ! shopt -oq posix; then
 fi
 
 #configure system settings-----------------------------
-xrandr --output eDP-1 --brightness 0.7
+xrandr --output eDP-1 --brightness 1
 xrandr --output HDMI-1 --left-of eDP-1
 setxkbmap -option "ctrl:nocaps"
 PROMPT_COMMAND="printf '\n';$PROMPT_COMMAND"
