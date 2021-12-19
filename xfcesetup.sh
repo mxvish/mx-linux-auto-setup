@@ -40,6 +40,7 @@ rm -r Templates Documents Music Pictures Videos
 mkdir downloads
 #sudo mv main.conf /etc/bluetooth
 mv terminalrc .config/xfce4/terminal/
+mv vimrc .vimrc
 
 #configure system settings-----------------------------
 xfconf-query -c xfce4-notifyd -p /do-not-disturb -s true
