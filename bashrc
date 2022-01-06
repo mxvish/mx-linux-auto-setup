@@ -4,17 +4,14 @@
 #x11vnc -storepasswd
 #x11vnc -usepw
 #/usr/bin/time $SHELL -i -c exit
-#ping raspberrypi.local
 #source mysql.sql 
-#uname
+#ls /etc/NetworkManager/system-connections/
+#sudo /etc/NetworkManager/system-connections/
 
-alias a='brave-browser amazon.co.jp'
 alias as='apt search'
-alias b='brave-browser'
 alias c='cd ~/first; java cd'
 alias ca='cat /sys/class/power_supply/BAT1/capacity'
 alias calc='brave-browser docs.google.com/spreadsheets/d/1ECwWvDWYEH4iZL_Hy9V2Xqy0NOVmpsAP/'
-alias cash='brave-browser docs.google.com/spreadsheets/d/1DmiHLVjndmnFSTckDJxi2IqUtY_d5vDj/'
 alias cl='sudo apt -y autoremove; sudo apt -y clean all'
 alias cpr='cp -r'
 alias d='brave-browser drive.google.com/drive/my-drive'
@@ -24,33 +21,29 @@ alias ex='emacs ~/xfcesetup.sh'
 alias g='brave-browser gakujo.shizuoka.ac.jp/portal/'
 alias gi='brave-browser github.com/kenteroshima'
 alias gm='brave-browser google.com/maps'
-alias ht='sh ~/first/ht.sh'
-alias hl='brave-browser localhost'
 alias ke='brave-browser keep.google.com'
 alias l='ls -a ~/downloads'
 alias m='brave-browser mail.google.com/mail/u/0/h'
 alias mk='mkdir'
 alias o='brave-browser onedrive.live.com'
-alias op='v ~/.bashrc'
+alias op='v ~/.bashrc;source ~/.bashrc'
 alias p='brave-browser my.pcloud.com/#page=filemanager'
 alias p3='python3'
 alias re='xfce4-session-logout --reboot'
-alias rmr='rm -r'
+alias rmr='rm -rf'
 alias s='xflock4'
 alias sc='gsettings set org.gnome.desktop.interface text-scaling-factor'
 alias si='sudo apt -y install'
 alias sl='brave-browser app.slack.com/client'
-alias so='source ~/.bashrc'
 alias sr='sudo apt -y remove'
 alias t='brave-browser todoist.com/app/upcoming'
-#alias t='brave-browser '
-#alias t='brave-browser '
 alias tr='xrandr --output HDMI-1 --brightness 0.8'
 alias tra='sudo rmmod psmouse; sudo modprobe psmouse proto=imps'
 alias u='sudo apt -y upgrade; sudo apt -y update;sudo update-grub'
 alias v='vi'
 alias visa='brave-browser docs.google.com/spreadsheets/d/1iuQ-DxULNRZp0QisqnwkH33GpLA8dkec/'
 alias vpn='brave-browser https://vpn.inf.shizuoka.ac.jp/dana-na/auth/url_3/welcome.cgi'
+alias vx='vi ~/xfcesetup.sh'
 alias xd='xdg-open'
 alias xdd='xdg-open ./'
 alias xe='xrandr --output eDP-1 --brightness'
@@ -58,7 +51,6 @@ alias x1='xrandr --output eDP-1 --brightness 1'
 alias x3='xrandr --output eDP-1 --brightness 0.3'
 alias xh='xrandr --output HDMI-1 --brightness'
 alias xh5='xrandr --output HDMI-1 --brightness 0.5'
-alias Wc='sh ~/Wc.sh'
 alias y='brave-browser youtube.com/playlist?list=WL'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -180,9 +172,11 @@ if ! shopt -oq posix; then
 fi
 
 #configure system settings-----------------------------
-xrandr --output eDP-1 --brightness 1
+xrandr --output eDP-1 --brightness 0.7
 xrandr --output HDMI-1 --left-of eDP-1
 setxkbmap -option "ctrl:nocaps"
 PROMPT_COMMAND="printf '\n';$PROMPT_COMMAND"
 export PS1="\W \$"
 export PATH=$PATH:/sbin
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

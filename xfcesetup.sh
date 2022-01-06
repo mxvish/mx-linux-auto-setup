@@ -3,6 +3,7 @@
 
 sudo apt -y update
 sudo apt -y upgrade
+sudo update-grub
 sudo apt -y remove firefox
 
 #install-----------------------------
@@ -14,23 +15,28 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt -y update
 sudo apt -y install brave-browser
 
-#sudo apt -y install nodejs
 #sudo sh first/VMware-Player-*.bundle
 sudo apt -y install chrome-gnome-shell
 sudo apt -y install ibus-mozc
 sudo apt -y install mpg321
-sudo apt -y install imagemagick
+#sudo apt -y install imagemagick
 sudo apt -y install r-base
 #sudo apt -y install ./first/rstudio*.deb
 sudo apt -y install fcitx fcitx-mozc --install-recommends
 sudo apt -y install tree
 sudo apt -y install x11vnc
+sudo apt -y install vim
 sudo apt -y install python3-django
+sudo apt -y install python3-numpy
+
+sudo apt-get -y autoremove
+sudo apt -y clean
 
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 source ~/.bashrc
 sudo apt -y install emacs-nox
+mkdir .emacs.d
 mv init.el .emacs.d/
 mv user-dirs.dirs .config/
 mv Desktop .Desktop
@@ -58,8 +64,6 @@ gsettings set org.gnome.desktop.search-providers disable-external true
 xfconf-query -c xfce4-desktop -np '/desktop-icons/style' -t 'int' -s '0'
 conkytoggle.sh
 
-sudo apt-get -y autoremove
-sudo apt -y clean
 reboot
 """
 settings
