@@ -3,9 +3,9 @@
 - How to use
 
 execute
-
-$sh xfcesetup.sh
-
+<pre>
+sh xfcesetup.sh
+</pre>
 in your home directory
 
 - P.S
