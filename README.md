@@ -1,4 +1,4 @@
-# mx_linux_cheatsheet
+# mx_linux_auto_setup
 
 - How to use
 
