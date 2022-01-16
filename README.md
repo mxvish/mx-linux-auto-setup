@@ -7,6 +7,6 @@ sh xfcesetup.sh
 </pre>
 in your home directory
 
-- P.S
+<b>P.S</b>
 
 rstudio.deb & zoom.deb are not included in first directory
