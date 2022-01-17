@@ -1,7 +1,7 @@
 # mx_linux_auto_setup
 My configuration files to setup mx linux
 
-<b>usage</b>
+## usage
 <pre>
 sh xfcesetup.sh
 </pre>
