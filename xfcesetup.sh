@@ -128,31 +128,6 @@ switch input method by C-space by default
 	right click input method icon on desktop menu bar -> configure -> global config
 	trigger input method= super + space
 	
-sudo apt -y install python3-django
-	p3 -m django version
-	django-admin startproject mysite
-	cd mysite
-	p3 manage.py startapp myapp
-	p3 manage.py migrate
-	p3 manage.py runserver
-
-	create original web page--------------
-	e myapp/views.py
-	e myapp/urls.py
-	e mysite/urls.py
-	p3 manage.py runserver(browse localhost:8000/app/
-
-	HttpResponse(f"Book: {Book.title}, published on {book.pub_date}")
-
-mysite/myapp/templates/book_details.html
-<p>Book: {{ book.title }}</p>
-<p>Published on {{ book.pub_date}}</p>
-
-return render(request, 'book_details.html', {'book' :book})	
-	
-sudo apt -y install default-mysql-server
-sudo apt -y install php-common libapache2-mod-php php-cli php-mysql
-
 workspaces
 	layout
 		number of workspaces 1
