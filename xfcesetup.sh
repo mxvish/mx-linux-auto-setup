@@ -44,7 +44,7 @@ mv Downloads .Downloads
 mv Public .Public
 rm -r Templates Documents Music Pictures Videos
 mkdir downloads
-#sudo mv main.conf /etc/bluetooth
+sudo mv main.conf /etc/bluetooth
 mv terminalrc .config/xfce4/terminal/
 mv vimrc .vimrc
 sudo mv grub /etc/default/
