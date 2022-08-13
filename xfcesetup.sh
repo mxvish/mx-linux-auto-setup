@@ -47,6 +47,8 @@ mkdir downloads
 #sudo mv main.conf /etc/bluetooth
 mv terminalrc .config/xfce4/terminal/
 mv vimrc .vimrc
+sudo mv grub /etc/default/
+sudo update-grub
 
 #configure system settings-----------------------------
 xfconf-query -c xfce4-notifyd -p /do-not-disturb -s true
@@ -64,7 +66,7 @@ gsettings set org.gnome.desktop.search-providers disable-external true
 xfconf-query -c xfce4-desktop -np '/desktop-icons/style' -t 'int' -s '0'
 conkytoggle.sh
 
-reboot
+sudo reboot
 """
 settings
 	keyboard shortcuts
