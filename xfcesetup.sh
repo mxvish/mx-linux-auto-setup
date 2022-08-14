@@ -46,6 +46,11 @@ rm -r Templates Documents Music Pictures Videos
 mkdir downloads
 sudo mv main.conf /etc/bluetooth
 mv terminalrc .config/xfce4/terminal/
+
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir ~/.vim ~/.vim/autoload
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mv plug.vim ~/.vim/autoload
 mv vimrc .vimrc
 sudo mv grub /etc/default/
 sudo update-grub
