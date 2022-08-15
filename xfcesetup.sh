@@ -19,8 +19,8 @@ sudo apt -y install brave-browser
 sudo apt -y install chrome-gnome-shell
 sudo apt -y install ibus-mozc
 sudo apt -y install mpg321
-#sudo apt -y install imagemagick
 sudo apt -y install r-base
+sudo apt -y install ranger
 #sudo apt -y install ./first/rstudio*.deb
 sudo apt -y install fcitx fcitx-mozc --install-recommends
 sudo apt -y install tree
