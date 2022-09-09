@@ -2,9 +2,11 @@
 My configuration files to setup mx linux
 
 ## usage
-<pre>
-sh xfcesetup.sh
-</pre>
+```sh
+git clone https://github.com/mxvish/mx-linux-auto-setup.git
+mv mx-linux-auto-setup/* ~
+sudo sh xfcesetup.sh
+```
 in your home directory
 
 <b>P.S</b>
