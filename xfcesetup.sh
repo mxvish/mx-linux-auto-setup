@@ -62,7 +62,9 @@ timedatectl set-timezone Asia/Tokyo
 gsettings set org.gnome.desktop.background picture-options scaled
 xfconf-query -c xfce4-session -p /general/SaveOnExit -s false
 xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-dark-mx
-xfconf-query -c xsettings -p /Xft/DPI -s 120
+#xfconf-query -c xsettings -p /Xft/DPI -s 120
+echo 'Xft.dpi: 120' > ~/.Xresources
+xrdb ~/.Xresources 
 xfconf-query -c xsettings -p /Gtk/KeyThemeName -s Emacs
 
 sudo pm-powersave false
