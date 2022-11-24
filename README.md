@@ -12,3 +12,5 @@ in your home directory
 <b>P.S</b>
 
 rstudio.deb & zoom.deb are not included in first directory
+
+`grub.cfg` locates to `/boot/grub/grub.cfg`.
